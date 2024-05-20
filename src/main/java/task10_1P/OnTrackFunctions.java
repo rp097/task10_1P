@@ -17,18 +17,25 @@ public class OnTrackFunctions {
         String[] sit719Tasks = {"Task 8.1P", "Task 9.2C", "Task 10.3D"};
         String[] sit718Tasks = {"Task 1.1P", "Task 2.3D", "Task 4.2C"};
 
-        switch (unitCode) {
-            case "SIT707":
-                return sit707Tasks;
-            case "SIT744":
-                return sit744Tasks;
-            case "SIT719":
-                return sit719Tasks;
-            case "SIT718":
-                return sit718Tasks;
-            default:
-                return new String[]{}; // Return an empty array if the unit code is not found
+        
+        if(unitCode.equals("SIT707")) {
+        	return sit707Tasks;
         }
+        else if(unitCode.equals("SIT744")) {
+        	return sit744Tasks;
+        }
+        else if(unitCode.equals("SIT719")) {
+        	return sit719Tasks;
+        }
+        else if(unitCode.equals("SIT718")) {
+        	return sit718Tasks;
+        }
+        else
+        {
+        	return new String[]{}; // Return an empty array if the unit code is not found
+        }
+                
+        
     }
 }
 	
